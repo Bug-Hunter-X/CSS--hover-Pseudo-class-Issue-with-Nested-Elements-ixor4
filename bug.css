@@ -1,0 +1,23 @@
+The following CSS code snippet demonstrates an issue where the expected behavior of the `:hover` pseudo-class is not working as intended.  The text within the `<p>` tag should change color when the `<div>` element is hovered over, but it does not.
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+div:hover p {
+  color: red;
+}
+
+p {
+  color: blue;
+}
+```
+
+```html
+<div>
+  <p>This text should turn red on hover.</p>
+</div>
+```
