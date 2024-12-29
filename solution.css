@@ -1,0 +1,19 @@
+The solution involves ensuring that the specificity of the `div:hover p` selector is high enough to override the style applied to the `p` element directly.
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+div:hover p {
+  color: red !important; /* Added !important to ensure higher specificity */
+}
+
+p {
+  color: blue;
+}
+```
+
+By adding `!important` to the `color: red` declaration in `div:hover p`, we ensure that this style takes precedence over the style declared for the `p` element alone, fixing the issue.  Note that using `!important` should be done judiciously and is a less elegant solution, ideally, specificity should be managed using more specific selectors.
